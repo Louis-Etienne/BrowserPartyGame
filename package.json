@@ -1,0 +1,18 @@
+{
+  "name": "bpg",
+  "version": "1.0.0",
+  "description": "a little party game for the browser",
+  "main": "server_bpg.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Louis-Etienne Messier",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "pixi.js": "^8.1.1",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  }
+}
