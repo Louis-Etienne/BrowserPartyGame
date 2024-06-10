@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background-color: #232023;
+    --background-color2: #454245;
+    --bpg-green: #00FF00;
+    --bpg-red: #FF0000;
+}
+
+body {
+    font-family: "Karla";
+    background-color: var(--background-color)
+
+
+}
+
+.App{
+    height: 100%;
+}
