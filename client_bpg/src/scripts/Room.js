@@ -26,4 +26,20 @@ export default class Room{
         }
         return true
     }
+
+    getID(){
+        return this.id
+    }
+    getPlayerList(){
+        return this.playerList
+    }
+    getSceneManager(){
+        return this.sceneManager
+    }
+    getChat (){
+        return this.chat
+    }
+    getColors(){
+        return this.colors
+    }
 }

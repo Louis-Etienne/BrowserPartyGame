@@ -1,0 +1,64 @@
+/********TOP CONTAINERS******/
+.gameroom_big{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+/**END-**TOP CONTAINERS******/
+
+
+/********PLAYERS******/
+.gameroom_big_players{  
+    min-width: 200px;
+    width: 200px;
+    max-height: 400px;
+    overflow-y: scroll;
+
+    border: 1px solid white;
+}
+.gameroom_big_players::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+    background-color: var(--background-color);
+    border-left: 1px white solid;
+}
+.gameroom_big_players::-webkit-scrollbar-thumb{
+    background-color: white;
+}
+/***END--**PLAYERS******/
+
+
+/********SCREENS******/
+.gameroom_big_screen{
+    aspect-ratio: 4/3;
+    min-width: 300px;
+    max-width: 600px;
+}
+/***END--**SCREEN******/
+
+
+/********CHAT******/
+.gameroom_big_chat{
+    min-width: 200px;
+    width: 200px;
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px white solid;
+}
+.gameroom_big_chat::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+    background-color: var(--background-color);
+    border-left: 1px white solid;
+}
+.gameroom_big_chat::-webkit-scrollbar-thumb{
+    background-color: white;
+}
+/**END--***CHAT******/
+
+@media screen and (max-width : 900px) {
+    .gameroom_big{
+        display: none;
+    }
+
+}

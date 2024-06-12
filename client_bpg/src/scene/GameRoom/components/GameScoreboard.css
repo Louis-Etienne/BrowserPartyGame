@@ -1,0 +1,60 @@
+.gamescoreboard{
+    display: flex;
+    flex-direction: column; gap: 3px;
+    margin: 3px;
+    user-select: none;
+    color: white;
+}
+
+.gamescoreboard_player{
+    padding: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    display: flex; flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+
+    border: solid white 1px;
+}
+
+.gamescoreboard_place{
+    font-size: 2rem;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.gamescoreboard_crown{
+    width: 35px;
+    height: 35px;
+
+    border: solid white 1px;
+    display: flex; justify-content: center;
+    align-items: center;
+
+}
+.gamescoreboard_playername{
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+}
+.gamescoreboard_playername_ready{
+    
+    padding: 5px;
+
+    font-weight: bold;
+    color: black;
+    border: 1px solid var(--bpg-green);
+    background-color: var(--bpg-green);
+}
+
+.gamescoreboard_values{
+    width: 100%;
+    border: 1px solid white;
+    padding: 10px;
+}

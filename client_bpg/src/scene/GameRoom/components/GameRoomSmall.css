@@ -1,0 +1,76 @@
+/********TOP CONTAINERS******/
+.gameroom_small{
+    padding-left: 5px;
+    padding-right: 5px;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+/**END-**TOP CONTAINERS******/
+
+
+/***********SCREEN*********/
+.gameroom_small_screen{
+    aspect-ratio: 4/3;
+    min-width: 250px;
+    max-width: 450px;
+    align-self: center;
+}
+/**END--*****SCREEN******/
+
+
+/***********INTERACTABLE*********/
+.gameroom_small_interactable{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+
+    flex-grow: 1;
+    overflow-y: hidden;
+    
+}
+
+.gameroom_small_players{
+    flex-grow: 1;
+    min-width: 100px;
+    border: 1px solid white;
+    overflow-y: scroll;
+
+}
+.gameroom_small_chat{
+    min-width: 100px;
+    max-width: 300px;
+    overflow-y: scroll;
+    border: 1px solid white;
+
+}
+.gameroom_small_players::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+    background-color: var(--background-color);
+    border-left: 1px white solid;
+}
+.gameroom_small_players::-webkit-scrollbar-thumb{
+    background-color: white;
+}
+
+.gameroom_small_chat::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+    background-color: var(--background-color);
+    border-left: 1px white solid;
+}
+.gameroom_small_chat::-webkit-scrollbar-thumb{
+    background-color: white;
+}
+/**END--******INTERACTABLE*********/
+
+@media screen and (max-width : 900px) {
+    .gameroom_small{
+        display: flex;
+        gap: 10px;
+
+    }
+
+}

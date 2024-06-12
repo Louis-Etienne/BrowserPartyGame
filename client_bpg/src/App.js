@@ -1,15 +1,16 @@
 import {useEffect, useState} from 'react'
 import {socket} from './socket'
 import "./index.css" 
-import { AppState } from './helper/enums'
+import {Config} from './helper/Config'
 import MainMenu from './scene/MainMenu/MainMenu'
 import Lobby from './scene/Lobby/Lobby'
-import GameRoom from './scene/GameRoom'
+import GameRoom from './scene/GameRoom/GameRoom'
 import Room from './scripts/Room'
+import Canvas from './scene/GameRoom/components/Canvas'
 
 function App() {
   const [roomInfo, setRoomInfo] = useState()
-  const [appState, setAppState] = useState(AppState.MAINMENU)
+  const [appState, setAppState] = useState(Config.appState.MAINMENU)
   const [personnalID, setPersonnalID] = useState()
 
   useEffect(()=>{
@@ -35,10 +36,11 @@ function App() {
 
   return (
     <div className="app">
-      {appState === AppState.MAINMENU && <MainMenu/>}
-      {appState === AppState.LOBBY && 
-      <Lobby p_roomInfo={roomInfo} p_personnalID={personnalID}/>}
-      {appState === AppState.GAMEROOM && <GameRoom/>}
+      {appState === Config.appState.MAINMENU && <MainMenu/>}
+      {appState === Config.appState.LOBBY
+        && <Lobby p_roomInfo={roomInfo} p_personnalID={personnalID}/>}
+      {appState === Config.appState.GAMEROOM 
+        && <GameRoom p_roomInfo={roomInfo} canvas={<Canvas/>}/>}
     </div>
   );
 }

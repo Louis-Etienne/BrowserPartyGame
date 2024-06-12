@@ -70,7 +70,6 @@ module.exports = class Lobby extends Scene{
     }
 
     destroy(){
-        p_socket.off('lobby_new_color')
-        p_socket.off('lobby_ready')
+        
     }
 }
