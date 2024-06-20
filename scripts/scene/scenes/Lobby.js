@@ -11,7 +11,7 @@ module.exports = class Lobby extends Scene{
     }
     
     getState(){
-        return Config.m_appState.LOBBY
+        return Config.APP_STATE.LOBBY
     }
 
     join(p_io, p_socket, p_thisRoom){

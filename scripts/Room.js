@@ -41,7 +41,23 @@ module.exports = class Room{
             playerList : this.m_playerList.getInfo(),
             sceneManager : this.m_sceneManager.getInfo(),
             chat : this.m_chat.getInfo(),
-            colors : Config.m_player_colors,
+            colors : Config.PLAYER_COLORS,
         });
+    }
+
+    getPlayerList(){
+        return this.m_playerList
+    }
+
+    getSceneManager(){
+        return this.m_sceneManager
+    }
+
+    getChat(){
+        return this.m_chat
+    }
+
+    getID(){
+        return this.m_id
     }
 }

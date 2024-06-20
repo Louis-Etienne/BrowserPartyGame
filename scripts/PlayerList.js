@@ -38,7 +38,7 @@ module.exports = class PlayerList{
 
     getUnusedColor(){
         const allColors = this.getAllColors();
-        for(const color of Object.values(Config.m_player_colors)){
+        for(const color of Object.values(Config.PLAYER_COLORS)){
             if(!allColors.has(color)){
                 return color;
             }

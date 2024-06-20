@@ -18,11 +18,11 @@ module.exports = class RoomList{
         const ID = p_socket.roomID
         if (ID){
             if(this.m_rooms[ID]){
-                const length = this.m_rooms[ID].m_playerList.getPlayerCount();
+                const length = this.m_rooms[ID].getPlayerList().getPlayerCount();
                 if(length > 1){
                     this.m_rooms[ID].remove(p_io, p_socket);
-                    if(this.m_rooms[ID].m_playerList.allReady()){
-                        this.m_rooms[ID].m_sceneManager.allReadyCallback(
+                    if(this.m_rooms[ID].getPlayerList().allReady()){
+                        this.m_rooms[ID].getSceneManager().allReadyCallback(
                             p_io, p_socket, this.m_rooms[ID]
                         )
                     }
@@ -39,8 +39,8 @@ module.exports = class RoomList{
     canJoinRoom(p_socket, p_roomID){
         log(`${p_socket.id} trying to join room : ${p_roomID}`)
         if(this.m_rooms[p_roomID] && p_roomID != p_socket.id){
-            const length = this.m_rooms[p_roomID].m_playerList.getPlayerCount()
-            if(length < Config.m_maxPlayer){
+            const length = this.m_rooms[p_roomID].getPlayerList().getPlayerCount()
+            if(length < Config.MAX_PLAYERS){
                 return true;
             }
             else{

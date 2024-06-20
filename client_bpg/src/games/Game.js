@@ -10,8 +10,8 @@ export default class Game {
 
         this.createApp(view)
 
-        this.viewWidth = Config.gameWindowSize.width;
-        this.viewHeight = Config.gameWindowSize.height;
+        this.viewWidth = Config.GAME_WINDOW_SIZE.width;
+        this.viewHeight = Config.GAME_WINDOW_SIZE.height;
         this.mouseX = 0;
         this.mouseY = 0;
 
@@ -38,16 +38,16 @@ export default class Game {
     }
 
     PIXIMOUSEMOVE(e){
-        this.mouseX = e.offsetX / this.app.canvas.offsetWidth * Config.gameWindowSize.width
-        this.mouseY = e.offsetY / this.app.canvas.offsetHeight * Config.gameWindowSize.height
+        this.mouseX = e.offsetX / this.app.canvas.offsetWidth * Config.GAME_WINDOW_SIZE.width
+        this.mouseY = e.offsetY / this.app.canvas.offsetHeight * Config.GAME_WINDOW_SIZE.height
     }
 
     async createApp(view) {
         this.app = new PIXI.Application()
         await this.app.init({
             canvas: view,
-            width: Config.gameWindowSize.width,
-            height: Config.gameWindowSize.height,
+            width: Config.GAME_WINDOW_SIZE.width,
+            height: Config.GAME_WINDOW_SIZE.height,
             backgroundColor: 0xFFFFFF,
             antialias: true,
         })
@@ -63,6 +63,6 @@ export default class Game {
     }
 
     destroy() {
-        this.app.destroy()
+        this.app.destroy(true, { children: true, texture: true, baseTexture: true, textureSource: true, context:true, })
     }
 }

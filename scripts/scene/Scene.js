@@ -1,4 +1,4 @@
-const Config = require("../Config")
+
 
 module.exports = class Scene {
     constructor() { }

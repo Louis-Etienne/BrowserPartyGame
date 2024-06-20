@@ -17,8 +17,8 @@ export default function Canvas({}){
 
     return(
         <div className='game_canvas' style={{height: '100%'}}>
-            <canvas height={Config.gameWindowSize.height} 
-                width={Config.gameWindowSize.width} 
+            <canvas height={Config.GAME_WINDOW_SIZE.height} 
+                width={Config.GAME_WINDOW_SIZE.width} 
                 ref={canvasRef}
                 style={{
                     width: '100%',

@@ -10,7 +10,7 @@ import Canvas from './scene/GameRoom/components/Canvas'
 
 function App() {
   const [roomInfo, setRoomInfo] = useState()
-  const [appState, setAppState] = useState(Config.appState.MAINMENU)
+  const [appState, setAppState] = useState(Config.APP_STATE.MAINMENU)
   const [personnalID, setPersonnalID] = useState()
 
   useEffect(()=>{
@@ -36,10 +36,10 @@ function App() {
 
   return (
     <div className="app">
-      {appState === Config.appState.MAINMENU && <MainMenu/>}
-      {appState === Config.appState.LOBBY
+      {appState === Config.APP_STATE.MAINMENU && <MainMenu/>}
+      {appState === Config.APP_STATE.LOBBY
         && <Lobby p_roomInfo={roomInfo} p_personnalID={personnalID}/>}
-      {appState === Config.appState.GAMEROOM 
+      {appState === Config.APP_STATE.GAMEROOM 
         && <GameRoom p_roomInfo={roomInfo} canvas={<Canvas/>}/>}
     </div>
   );

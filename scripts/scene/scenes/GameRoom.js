@@ -7,7 +7,7 @@ module.exports = class GameRoom extends Scene{
     }
 
     getState(){
-        return Config.m_appState.GAMEROOM
+        return Config.APP_STATE.GAMEROOM
     }
 
     join(p_io, p_socket, p_thisRoom) {
