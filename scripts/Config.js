@@ -19,7 +19,7 @@ module.exports = {
 
         MAX_PLAYERS : 8,
 
-        MAX_CHAT_MESSAGE : 10,
+        MAX_CHAT_MESSAGE : 4,
 
         APP_STATE : Object.freeze({
             MAINMENU : 0,
